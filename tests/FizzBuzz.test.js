@@ -30,7 +30,7 @@ describe('Tests que validan los múltiplos de 3 y 5', () => {
         //ASSERT: comprobar el escenario
         expect(respuesta_recibida).toBe(respuesta_esperada);
     });
-   test('Test resumido devuelve Fizz cuando es divisible por 3', () => {
+    test('Test resumido devuelve Fizz cuando es divisible por 3', () => {
         expect(new FizzBuzz().validar_primos_3_5(3)).toBe("Fizz");
     });
     test('Test devuelve Buzz cuando es divisible por 5', () => {
@@ -63,6 +63,25 @@ describe('Tests que validan los múltiplos de 3 y 5', () => {
         //ARRANGE: preparar el escenario
         const numero_ingresado = 15;
         const respuesta_esperada = "FizzBuzz";
+        const fizz = new FizzBuzz(); 
+        
+        //ACT: ejecutar el escenario
+        const respuesta_recibida = fizz.validar_primos_3_5(numero_ingresado);
+
+        //ASSERT: comprobar el escenario
+        expect(respuesta_recibida).toBe(respuesta_esperada);
+    });
+    test('Test devuelve el número cuando no es divisible ni por 3 ni por 5', () => {
+        /*
+         * GHERKIN TEST
+            * GIVEN / ARRANGE: un número
+            * WHEN / ACT: Cuando éste no sea divisible por 3 ni 5
+            * THEN / ASSERT: devuelve el número como resultado
+         */
+        
+        //ARRANGE: preparar el escenario
+        const numero_ingresado = 23;
+        const respuesta_esperada = numero_ingresado;
         const fizz = new FizzBuzz(); 
         
         //ACT: ejecutar el escenario
