@@ -51,5 +51,24 @@ describe('Tests que validan los múltiplos de 3 y 5', () => {
 
         //ASSERT: comprobar el escenario
         expect(respuesta_recibida).toBe(respuesta_esperada);
-    })
+    });
+    test('Test devuelve FizzBuzz cuando es divisible por 3 y 5', () => {
+        /*
+         * GHERKIN TEST
+            * GIVEN / ARRANGE: un número
+            * WHEN / ACT: Cuando éste sea divisible por 3 y 5
+            * THEN / ASSERT: devuelve FizzBuzz como resultado
+         */
+        
+        //ARRANGE: preparar el escenario
+        const numero_ingresado = 15;
+        const respuesta_esperada = "FizzBuzz";
+        const fizz = new FizzBuzz(); 
+        
+        //ACT: ejecutar el escenario
+        const respuesta_recibida = fizz.validar_primos_3_5(numero_ingresado);
+
+        //ASSERT: comprobar el escenario
+        expect(respuesta_recibida).toBe(respuesta_esperada);
+    });
 })
