@@ -1,5 +1,4 @@
 //Imports
-const {expect} = require("@jest/globals");
 const FizzBuzz = require("../FizzBuzz");
 
 /**
@@ -23,15 +22,17 @@ describe('Tests que validan los múltiplos de 3 y 5', () => {
         //ARRANGE: preparar el escenario
         const numero_ingresado = 3;
         const respuesta_esperada = "Fizz";
-        const fizz = new FizzBuzz(); 
-            //Me estoy creando un objeto de clase, instancio la clase; buscar más sobre esto; creo que es sobre POO
+        const fizz = new FizzBuzz(); //Me estoy creando un objeto de la clase FizzBuzz y se lo asigno a una constante que se llama fizz
         
         //ACT: ejecutar el escenario
         const respuesta_recibida = fizz.validar_primos_3_5(numero_ingresado);
 
         //ASSERT: comprobar el escenario
         expect(respuesta_recibida).toBe(respuesta_esperada);
-    })
+    });
+   test('Test resumido devuelve Fizz cuando es divisible por 3', () => {
+        expect(new FizzBuzz().validar_primos_3_5(3)).toBe("Fizz");
+    });
     test('Test devuelve Fizz cuando es divisible por 5', () => {
         /*
          * GHERKIN TEST
