@@ -33,19 +33,18 @@ describe('Tests que validan los múltiplos de 3 y 5', () => {
    test('Test resumido devuelve Fizz cuando es divisible por 3', () => {
         expect(new FizzBuzz().validar_primos_3_5(3)).toBe("Fizz");
     });
-    test('Test devuelve Fizz cuando es divisible por 5', () => {
+    test('Test devuelve Buzz cuando es divisible por 5', () => {
         /*
          * GHERKIN TEST
             * GIVEN / ARRANGE: un número
             * WHEN / ACT: Cuando éste sea divisible por 5
-            * THEN / ASSERT: devuelve Fizz como resultado
+            * THEN / ASSERT: devuelve Buzz como resultado
          */
         
         //ARRANGE: preparar el escenario
-        const numero_ingresado = 3;
-        const respuesta_esperada = "Fizz";
+        const numero_ingresado = 5;
+        const respuesta_esperada = "Buzz";
         const fizz = new FizzBuzz(); 
-            //Me estoy creando un objeto de clase, instancio la clase; buscar más sobre esto; creo que es sobre POO
         
         //ACT: ejecutar el escenario
         const respuesta_recibida = fizz.validar_primos_3_5(numero_ingresado);
