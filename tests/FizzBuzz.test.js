@@ -11,6 +11,7 @@ Feature para saber cuándo un número es primo de 3 y 5
 */
 
 describe('Tests que validan los múltiplos de 3 y 5', () => {
+    const fizz = new FizzBuzz(); //Me estoy creando un objeto de la clase FizzBuzz y se lo asigno a una constante que se llama fizz
     test('Test devuelve Fizz cuando es divisible por 3', () => {
         /*
          * GHERKIN TEST
@@ -22,16 +23,12 @@ describe('Tests que validan los múltiplos de 3 y 5', () => {
         //ARRANGE: preparar el escenario
         const numero_ingresado = 3;
         const respuesta_esperada = "Fizz";
-        const fizz = new FizzBuzz(); //Me estoy creando un objeto de la clase FizzBuzz y se lo asigno a una constante que se llama fizz
         
         //ACT: ejecutar el escenario
         const respuesta_recibida = fizz.validar_primos_3_5(numero_ingresado);
 
         //ASSERT: comprobar el escenario
         expect(respuesta_recibida).toBe(respuesta_esperada);
-    });
-    test('Test resumido devuelve Fizz cuando es divisible por 3', () => {
-        expect(new FizzBuzz().validar_primos_3_5(3)).toBe("Fizz");
     });
     test('Test devuelve Buzz cuando es divisible por 5', () => {
         /*
@@ -44,7 +41,6 @@ describe('Tests que validan los múltiplos de 3 y 5', () => {
         //ARRANGE: preparar el escenario
         const numero_ingresado = 5;
         const respuesta_esperada = "Buzz";
-        const fizz = new FizzBuzz(); 
         
         //ACT: ejecutar el escenario
         const respuesta_recibida = fizz.validar_primos_3_5(numero_ingresado);
@@ -63,7 +59,6 @@ describe('Tests que validan los múltiplos de 3 y 5', () => {
         //ARRANGE: preparar el escenario
         const numero_ingresado = 15;
         const respuesta_esperada = "FizzBuzz";
-        const fizz = new FizzBuzz(); 
         
         //ACT: ejecutar el escenario
         const respuesta_recibida = fizz.validar_primos_3_5(numero_ingresado);
@@ -82,7 +77,6 @@ describe('Tests que validan los múltiplos de 3 y 5', () => {
         //ARRANGE: preparar el escenario
         const numero_ingresado = 23;
         const respuesta_esperada = numero_ingresado;
-        const fizz = new FizzBuzz(); 
         
         //ACT: ejecutar el escenario
         const respuesta_recibida = fizz.validar_primos_3_5(numero_ingresado);
